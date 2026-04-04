@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>東京ホスピタリティ・クリーニング | ホテル清掃のプロフェッショナル</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* 移动端底部悬浮按钮防遮挡 */
+        @media (max-width: 768px) {
+            body { padding-bottom: 80px; }
+        }
+        .bg-navy { background-color: #1e3a8a; }
+        .text-navy { color: #1e3a8a; }
+        .border-navy { border-color: #1e3a8a; }
+        .bg-accent { background-color: #fbbf24; }
+        .text-accent { color: #d97706; }
+        .hero-gradient {
+            background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.6)), 
+                        url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .step-number {
+            font-family: 'Georgia', serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 relative">
+
+    <!-- 导航栏 -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="text-2xl font-bold text-navy tracking-tighter">TOKYO <span class="font-light">HOSPITALITY CLEAN</span></span>
+                </div>
+                <!-- 桌面端导航 -->
+                <div class="hidden lg:block">
+                    <div class="ml-10 flex items-baseline space-x-6 text-sm font-medium">
+                        <a href="#standards" class="hover:text-navy transition-colors">清掃基準</a>
+                        <a href="#system" class="hover:text-navy transition-colors">管理体制</a>
+                        <a href="#digital" class="hover:text-navy transition-colors">IT活用</a>
+                        <a href="#case" class="hover:text-navy transition-colors">導入実績</a>
+                        <a href="#workflow" class="hover:text-navy transition-colors">導入の流れ</a>
+                        <a href="#company" class="hover:text-navy transition-colors">会社概要</a>
+                        <a href="#contact" class="bg-navy text-white px-5 py-2.5 rounded-sm hover:bg-blue-800 transition-colors shadow-sm">お問い合わせ</a>
+                    </div>
+                </div>
+                <!-- 移动端菜单按钮 (视觉占位，由于单页主要靠滑动和底部CTA) -->
+                <div class="lg:hidden flex items-center">
+                    <button type="button" class="text-navy hover:text-blue-800 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首屏 (Hero) -->
+    <section class="relative h-screen flex items-center hero-gradient pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="text-white max-w-3xl">
+                <!-- 减分项修改：改为更稳重、稀缺的表述 -->
+                <div class="inline-block bg-accent text-navy text-xs font-bold px-4 py-1.5 mb-6 rounded-full shadow-lg">
+                    【毎月3社限定】清掃品質の無料診断・試掃キャンペーン実施中
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                    圧倒的な清掃品質で、<br>
+                    <span class="text-blue-200">ホテルの資産価値</span>を最大化する。
+                </h1>
+                <p class="text-lg md:text-xl mb-10 opacity-90 leading-relaxed font-light">
+                    台東区・墨田区を中心に、最高水準の客室清掃を提供。<br class="hidden md:block">
+                    ゲストの期待を超える清潔感で、貴施設のレビュー向上に貢献いたします。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-accent text-navy px-8 py-4 text-center font-bold hover:bg-yellow-400 transition-all rounded-sm shadow-lg">
+                        無料試掃（1室分）を申し込む
+                    </a>
+                    <a href="#standards" class="border border-white text-white px-8 py-4 text-center font-bold hover:bg-white/10 transition-all rounded-sm">
+                        当社のこだわりを見る
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. 清掃基準 (Cleaning Standards) -->
+    <section id="standards" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-navy mb-4">ミリ単位まで妥協しない「こだわり」</h2>
+                <div class="w-16 h-1 bg-navy mx-auto mb-6"></div>
+                <p class="text-slate-500 max-w-2xl mx-auto leading-relaxed">
+                    ゲストが客室の扉を開けた瞬間の「感動」を追求し、独自の清掃マニュアルで徹底管理しています。単なる作業ではなく、空間をデザインする品質をお約束します。
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6 aspect-video bg-slate-100 rounded-lg flex items-center justify-center">
+                        <span class="text-slate-400 font-bold text-sm tracking-widest"></span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 flex items-center"><span class="w-1.5 h-6 bg-navy mr-3 inline-block"></span>完璧なベッドメイキング</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        シワひとつないデュベカバーの張り、枕の高さの統一、45度のコーナー折り込みなど。高級ホテル基準の技術を標準化し、圧倒的な清潔感を視覚で伝えます。
+                    </p>
+                </div>
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6 aspect-video bg-slate-100 rounded-lg flex items-center justify-center">
+                        <span class="text-slate-400 font-bold text-sm tracking-widest"></span>
+                    </div>
+                    <!-- 日语修改：去除“极致除垢”这种生硬翻译 -->
+                    <h3 class="text-xl font-bold mb-3 flex items-center"><span class="w-1.5 h-6 bg-navy mr-3 inline-block"></span>水回りの徹底洗浄</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        鏡面の水垢ゼロ、排水口の毛髪・異臭の徹底除去。カラン（蛇口）の輝きを極限まで引き出し、築年数を感じさせない清潔なサニタリー空間を実現します。
+                    </p>
+                </div>
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6 aspect-video bg-slate-100 rounded-lg flex items-center justify-center">
+                        <span class="text-slate-400 font-bold text-sm tracking-widest"></span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 flex items-center"><span class="w-1.5 h-6 bg-navy mr-3 inline-block"></span>備品の緻密なセッティング</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        アメニティ、リモコン、インフォメーションブックの配置からロゴの向きまで、ミリ単位で統一。わずかな「ズレ」も許容しない、静謐で洗練された空間を創り出します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 加分项：强化 150人 核心优势的横幅 -->
+    <div class="bg-navy py-12 border-y border-blue-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-8 md:gap-16">
+                <div>
+                    <h3 class="text-blue-200 text-lg font-bold mb-1">都内最大級の清掃ネットワーク</h3>
+                    <p class="text-white text-2xl md:text-3xl font-bold">提携スタッフ稼働数</p>
+                </div>
+                <div class="flex items-baseline gap-2">
+                    <span class="text-7xl font-bold text-accent tracking-tighter">150</span>
+                    <span class="text-xl text-white font-bold">名以上</span>
+                </div>
+                <div class="hidden md:block w-px h-16 bg-blue-800"></div>
+                <div>
+                    <p class="text-white text-sm leading-relaxed max-w-xs">
+                        急な増室やトラブル時も安心。<br>
+                        圧倒的なリソースで、<br>安定した品質と稼働をお約束します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. 管理体制と教育 (Management & Education) -->
+    <section id="system" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-navy mb-4">独自の3層管理体制と徹底した教育プログラム</h2>
+                <p class="text-slate-500">安定した人員供給と、妥協のない品質管理を両立させる当社の強みです。</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-0 border border-slate-200 rounded-xl overflow-hidden shadow-sm bg-white mb-16">
+                <div class="p-10 border-b md:border-b-0 md:border-r border-slate-200">
+                    <div class="text-navy font-bold text-lg mb-4 tracking-widest">01. STAFF</div>
+                    <h4 class="text-xl font-bold mb-4">清掃実務スタッフ</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        自社研修センターでの模擬客室トレーニングをクリアした優秀なスタッフのみを現場へ配属。マナー教育も徹底し、ホテルスタッフとしての自覚を育成します。
+                    </p>
+                </div>
+                <div class="p-10 border-b md:border-b-0 md:border-r border-slate-200 bg-navy text-white">
+                    <div class="text-blue-300 font-bold text-lg mb-4 tracking-widest">02. INSPECTOR</div>
+                    <h4 class="text-xl font-bold mb-4">専属インスペクター</h4>
+                    <p class="text-blue-100 text-sm leading-relaxed">
+                        清掃スタッフとは別の「第三者の目」で全客室をダブルチェック。独自の「30項目チェックシート」に基づき、ヒューマンエラーによる品質のバラつきを完全に防ぎます。
+                    </p>
+                </div>
+                <div class="p-10">
+                    <div class="text-navy font-bold text-lg mb-4 tracking-widest">03. MANAGER</div>
+                    <h4 class="text-xl font-bold mb-4">統括マネージャー</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        ホテルオーナー様・支配人様との専任窓口。急な稼働変動や突発的なトラブルに対しても、24時間体制で即座にリソースを最適化し、円滑な運営をサポートします。
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 md:p-10 rounded-xl border border-slate-200 shadow-sm">
+                <h4 class="text-lg font-bold text-navy mb-8 text-center">コンプライアンスへの厳格な取り組み</h4>
+                <div class="grid md:grid-cols-2 gap-10 text-sm">
+                    <div class="flex items-start gap-4">
+                        <div class="text-accent text-2xl mt-1">✓</div>
+                        <div>
+                            <p class="font-bold text-base mb-2">不法就労防止の徹底管理</p>
+                            <p class="text-slate-500 leading-relaxed">全ての外国人スタッフに対し、入館システム等を用いた在留カードの真贋判定と期限管理を厳格に実施。大手法人様やファンド系オーナー様にも安心してご契約いただけるコンプライアンス体制を構築しています。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <!-- 日语修改：去除“完备” -->
+                        <div class="text-accent text-2xl mt-1">✓</div>
+                        <div>
+                            <p class="font-bold text-base mb-2">自社トレーニングセンターでの実践研修</p>
+                            <p class="text-slate-500 leading-relaxed">現場投入前に、実物のベッドやバスユニットを使用した集中研修を実施。「作業」ではなく「おもてなしの空間づくり」というマインドセットから技術までを徹底的に指導します。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. IT・デジタル活用 (IT & Digitalization) -->
+    <section id="digital" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-navy mb-6 leading-tight">清掃現場をブラックボックス化させない。<br>ITを活用した透明性の高い報告体制</h2>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        「清掃の進捗が見えない」「忘れ物の報告が遅い」といった運営上のストレスを排除。当社はデジタルツールを駆使し、現場の状況をリアルタイムで可視化します。
+                    </p>
+                    <div class="space-y-8">
+                        <div class="flex gap-5">
+                            <div class="w-14 h-14 bg-blue-50 flex-shrink-0 flex items-center justify-center rounded-xl text-navy">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-navy text-lg mb-1">写真付きリアルタイム完了報告</h5>
+                                <p class="text-sm text-slate-500 leading-relaxed">LINEや専用チャットツールを通じ、清掃完了とインスペクション合格をフロントへ即座に通知。清掃後の客室状態も写真で確認可能です。</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5">
+                            <div class="w-14 h-14 bg-blue-50 flex-shrink-0 flex items-center justify-center rounded-xl text-navy">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-navy text-lg mb-1">設備異常・不備の即時アラート</h5>
+                                <p class="text-sm text-slate-500 leading-relaxed">電球切れや水漏れ、クロスの傷などを発見次第、現場から即時報告。迅速な修繕対応を可能にし、販売機会の損失を防ぎます。</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5">
+                            <div class="w-14 h-14 bg-blue-50 flex-shrink-0 flex items-center justify-center rounded-xl text-navy">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-navy text-lg mb-1">遺失物（忘れ物）のデジタル管理</h5>
+                                <p class="text-sm text-slate-500 leading-relaxed">忘れ物を発見した瞬間、該当する物品の写真と発見場所をクラウドへアップロード。フロントでのゲスト対応が劇的にスムーズになります。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 relative mt-10 lg:mt-0">
+                    <div class="bg-slate-200 rounded-3xl aspect-[4/5] flex items-center justify-center shadow-inner border-4 border-slate-100">
+                        <span class="text-slate-400 font-bold uppercase tracking-widest text-sm"></span>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 shadow-2xl rounded-2xl border border-slate-100 hidden md:block">
+                        <p class="text-xs font-bold text-slate-400 uppercase mb-2">System Status</p>
+                        <p class="text-lg font-bold text-green-500 flex items-center gap-2">
+                            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                            Online & Reporting
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 解決事例 (Case Studies) - 日语修改 -->
+    <section id="case" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16">導入事例・実績</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-accent transition-colors">
+                    <div class="inline-block bg-accent text-navy text-[10px] font-bold px-3 py-1 rounded-sm mb-5 tracking-widest">CASE 01</div>
+                    <h4 class="text-xl font-bold mb-5 text-accent">築30年の老朽化ホテルの再生（台東区）</h4>
+                    <div class="space-y-5 mb-8">
+                        <div>
+                            <p class="text-xs text-blue-300 font-bold mb-1.5 uppercase tracking-wider">課題：</p>
+                            <p class="text-sm leading-relaxed text-slate-300">水回りの頑固な水垢と独特の「古びた匂い」により、OTA（予約サイト）の清潔感スコアが3.2まで低迷していた。</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-blue-300 font-bold mb-1.5 uppercase tracking-wider">解決策：</p>
+                            <p class="text-sm leading-relaxed text-slate-300">酸性洗剤を用いた特殊洗浄の実施と、全室の排水口徹底除菌。インスペクターによる「匂い」の官能検査を標準プロセスとして導入。</p>
+                        </div>
+                    </div>
+                    <div class="bg-white/10 p-5 rounded-xl flex items-center justify-between border border-white/5">
+                        <span class="text-sm font-bold">OTA清潔感スコア</span>
+                        <span class="text-2xl font-bold text-accent">3.2 → 4.2 <span class="text-sm text-white font-normal ml-1">に改善</span></span>
+                    </div>
+                </div>
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-accent transition-colors">
+                    <div class="inline-block bg-accent text-navy text-[10px] font-bold px-3 py-1 rounded-sm mb-5 tracking-widest">CASE 02</div>
+                    <h4 class="text-xl font-bold mb-5 text-accent">深刻な人手不足と清掃遅延の解消（墨田区）</h4>
+                    <div class="space-y-5 mb-8">
+                        <div>
+                            <p class="text-xs text-blue-300 font-bold mb-1.5 uppercase tracking-wider">課題：</p>
+                            <p class="text-sm leading-relaxed text-slate-300">インバウンド需要の急増に伴い自社スタッフが不足。15時のチェックイン時間に清掃が間に合わない事態が頻発していた。</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-blue-300 font-bold mb-1.5 uppercase tracking-wider">解決策：</p>
+                            <p class="text-sm leading-relaxed text-slate-300">当社の150名規模のスタッフネットワークを活用し、近隣エリアから機動的に人員を投入。清掃動線の抜本的な見直しを実施。</p>
+                        </div>
+                    </div>
+                    <div class="bg-white/10 p-5 rounded-xl flex items-center justify-between border border-white/5">
+                        <span class="text-sm font-bold">15時チェックイン対応率</span>
+                        <span class="text-2xl font-bold text-accent">65% → 100% <span class="text-sm text-white font-normal ml-1">を達成</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 施設タイプ別ソリューション -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-navy text-center mb-16">施設形態に合わせた最適化ソリューション</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                    <h4 class="text-xl font-bold mb-4 text-navy">ビジネスホテル</h4>
+                    <p class="text-sm text-slate-600 mb-6 leading-relaxed">高稼働率を支える圧倒的なスピードと、マニュアルの完全遵守を両立。清掃コストの最適化を提案します。</p>
+                    <ul class="text-xs text-slate-500 space-y-2">
+                        <li class="flex items-center"><span class="w-1 h-1 bg-accent rounded-full mr-2"></span>大量客室の均一クオリティ保持</li>
+                        <li class="flex items-center"><span class="w-1 h-1 bg-accent rounded-full mr-2"></span>早朝・深夜帯のシフト対応</li>
+                    </ul>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                    <h4 class="text-xl font-bold mb-4 text-navy">アパートメントホテル</h4>
+                    <p class="text-sm text-slate-600 mb-6 leading-relaxed">キッチン、大型家電、カトラリーなど。生活空間特有の細やかなメンテナンスと消耗品の在庫管理を徹底します。</p>
+                    <ul class="text-xs text-slate-500 space-y-2">
+                        <li class="flex items-center"><span class="w-1 h-1 bg-accent rounded-full mr-2"></span>調理器具の除菌・油汚れ除去</li>
+                        <li class="flex items-center"><span class="w-1 h-1 bg-accent rounded-full mr-2"></span>ゴミの厳密な分別・回収管理</li>
+                    </ul>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                    <h4 class="text-xl font-bold mb-4 text-navy">老朽建築・リノベーション民泊</h4>
+                    <p class="text-sm text-slate-600 mb-6 leading-relaxed">カビ、建材の劣化、特有の臭いなど。建物ごとの個性に合わせた特殊清掃プランで、物件の価値を蘇らせます。</p>
+                    <ul class="text-xs text-slate-500 space-y-2">
+                        <li class="flex items-center"><span class="w-1 h-1 bg-accent rounded-full mr-2"></span>除湿、強力な消臭対策の徹底</li>
+                        <li class="flex items-center"><span class="w-1 h-1 bg-accent rounded-full mr-2"></span>建築素材に合わせた専用薬剤の選定</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 導入の流れ (Workflow) -->
+    <section id="workflow" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-navy mb-16">ご契約・導入までの流れ</h2>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+                <!-- 连线 (仅桌面端) -->
+                <div class="hidden md:block absolute top-[40%] left-10 right-10 h-0.5 bg-slate-200 -z-10"></div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 z-10">
+                    <div class="step-number text-navy font-bold text-3xl opacity-20 mb-3">01</div>
+                    <h5 class="font-bold text-sm mb-2 text-slate-800">お問い合わせ</h5>
+                    <p class="text-[11px] text-slate-500">専用フォームよりご連絡</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 z-10">
+                    <div class="step-number text-navy font-bold text-3xl opacity-20 mb-3">02</div>
+                    <h5 class="font-bold text-sm mb-2 text-slate-800">無料現地調査</h5>
+                    <p class="text-[11px] text-slate-500">部屋タイプ・汚れの確認</p>
+                </div>
+                <div class="bg-accent p-6 rounded-xl shadow-md ring-4 ring-accent/20 z-10 transform md:-translate-y-2">
+                    <div class="step-number text-navy font-bold text-3xl opacity-40 mb-3">03</div>
+                    <h5 class="font-bold text-sm mb-2 text-navy">無料試掃の実施</h5>
+                    <p class="text-[11px] text-navy/80 font-bold">実際の品質をご体験</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 z-10">
+                    <div class="step-number text-navy font-bold text-3xl opacity-20 mb-3">04</div>
+                    <h5 class="font-bold text-sm mb-2 text-slate-800">お見積り・ご契約</h5>
+                    <p class="text-[11px] text-slate-500">最適なプランと単価の確定</p>
+                </div>
+                <div class="bg-navy text-white p-6 rounded-xl shadow-sm z-10">
+                    <div class="step-number text-white font-bold text-3xl opacity-40 mb-3">05</div>
+                    <h5 class="font-bold text-sm mb-2 text-white">業務スタート</h5>
+                    <p class="text-[11px] text-blue-200">専属チームが現場へ参画</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-navy text-center mb-16">よくあるご質問</h2>
+            <div class="space-y-8">
+                <!-- 加分项：新增费用FAQ -->
+                <div class="border-b border-slate-100 pb-6">
+                    <p class="font-bold text-navy mb-3 flex items-start text-lg">
+                        <span class="mr-4 text-accent font-serif text-2xl leading-none">Q.</span>
+                        清掃料金の目安を教えてください。
+                    </p>
+                    <div class="flex items-start">
+                        <span class="mr-4 text-slate-300 font-serif text-2xl leading-none">A.</span>
+                        <p class="text-slate-600 text-sm leading-relaxed pt-1">
+                            施設タイプ（ビジネス・アパートメント・民泊等）や客室の平米数によって異なります。無料の現地調査後、貴施設に最適なプランと正確なお見積りをご提示いたします。まずは無料の試掃をお試しいただき、当社の品質をご確認ください。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border-b border-slate-100 pb-6">
+                    <p class="font-bold text-navy mb-3 flex items-start text-lg">
+                        <span class="mr-4 text-accent font-serif text-2xl leading-none">Q.</span>
+                        客室数が10室以下の小規模施設でも対応可能ですか？
+                    </p>
+                    <div class="flex items-start">
+                        <span class="mr-4 text-slate-300 font-serif text-2xl leading-none">A.</span>
+                        <p class="text-slate-600 text-sm leading-relaxed pt-1">
+                            はい、対応可能です。規模に関わらず、台東区・墨田区エリアの宿泊施設様を幅広くサポートしております。小規模施設であっても、専属インスペクターによる品質チェックは同様に実施いたします。
+                        </p>
+                    </div>
+                </div>
+                <div class="border-b border-slate-100 pb-6">
+                    <p class="font-bold text-navy mb-3 flex items-start text-lg">
+                        <span class="mr-4 text-accent font-serif text-2xl leading-none">Q.</span>
+                        繁忙期（桜や紅葉の時期）だけの人材増援はお願いできますか？
+                    </p>
+                    <div class="flex items-start">
+                        <span class="mr-4 text-slate-300 font-serif text-2xl leading-none">A.</span>
+                        <p class="text-slate-600 text-sm leading-relaxed pt-1">
+                            可能です。150名以上の提携ネットワークを活かし、オーナー様の自社清掃チームでは賄いきれないピーク時のみのサポートも柔軟に承っております。
+                        </p>
+                    </div>
+                </div>
+                <div class="border-b border-slate-100 pb-6">
+                    <p class="font-bold text-navy mb-3 flex items-start text-lg">
+                        <span class="mr-4 text-accent font-serif text-2xl leading-none">Q.</span>
+                        スタッフの教育体制や在留資格のチェックはどうなっていますか？
+                    </p>
+                    <div class="flex items-start">
+                        <span class="mr-4 text-slate-300 font-serif text-2xl leading-none">A.</span>
+                        <p class="text-slate-600 text-sm leading-relaxed pt-1">
+                            自社研修センターでの技術研修に加え、コンプライアンス管理チームが最新の判定システムで在留カードの確認を行い、不法就労防止を徹底しております。コンプライアンスに厳しい大手法人様・ファンド様からも高い評価をいただいております。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 加分项：会社概要 (Company Profile) -->
+    <section id="company" class="py-24 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-navy text-center mb-12">会社概要</h2>
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                <table class="w-full text-sm text-left">
+                    <tbody>
+                        <tr class="border-b border-slate-100">
+                            <th class="py-5 px-6 bg-slate-50 text-navy font-bold w-1/3">会社名</th>
+                            <td class="py-5 px-6 text-slate-700">株式会社 Tokyo Hospitality Clean</td>
+                        </tr>
+                        <tr class="border-b border-slate-100">
+                            <th class="py-5 px-6 bg-slate-50 text-navy font-bold w-1/3">所在地</th>
+                            <td class="py-5 px-6 text-slate-700">〒111-0000<br>東京都台東区〇〇丁目〇-〇</td>
+                        </tr>
+                        <tr class="border-b border-slate-100">
+                            <th class="py-5 px-6 bg-slate-50 text-navy font-bold w-1/3">設立</th>
+                            <td class="py-5 px-6 text-slate-700">2023年4月</td>
+                        </tr>
+                        <tr class="border-b border-slate-100">
+                            <th class="py-5 px-6 bg-slate-50 text-navy font-bold w-1/3">代表者</th>
+                            <td class="py-5 px-6 text-slate-700">代表取締役　山田 太郎</td>
+                        </tr>
+                        <tr>
+                            <th class="py-5 px-6 bg-slate-50 text-navy font-bold w-1/3">事業内容</th>
+                            <td class="py-5 px-6 text-slate-700 leading-relaxed">
+                                1. ホテル・旅館・民泊の客室清掃業務<br>
+                                2. ビルメンテナンス及び定期清掃業務<br>
+                                3. 清掃コンサルティング業務
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系表单 (Contact) -->
+    <section id="contact" class="py-24 bg-navy text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">お問い合わせ</h2>
+                <p class="mt-6 text-blue-200 font-medium text-lg uppercase tracking-widest">Free Trial Cleaning & Quotation</p>
+                <p class="mt-4 text-sm text-blue-100">清掃に関するお悩みや、無料試掃・お見積りのご依頼はお気軽にご相談ください。</p>
+            </div>
+
+            <form id="contactForm" class="bg-white p-8 md:p-12 shadow-2xl rounded-xl space-y-6 text-slate-800">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">貴社名 <span class="text-red-500">*</span></label>
+                        <input type="text" required placeholder="株式会社〇〇" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-navy focus:bg-white transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">ご担当者名 <span class="text-red-500">*</span></label>
+                        <input type="text" required placeholder="山田 太郎" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-navy focus:bg-white transition-all">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">メールアドレス <span class="text-red-500">*</span></label>
+                    <input type="email" required placeholder="example@domain.com" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-navy focus:bg-white transition-all">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">お問い合わせ内容 <span class="text-red-500">*</span></label>
+                    <textarea rows="5" required placeholder="無料試掃のご依頼、お見積り依頼、または現在の清掃に関する課題などをご自由にご記入ください。" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-navy focus:bg-white transition-all"></textarea>
+                </div>
+                <div class="text-center pt-4">
+                    <button type="submit" class="bg-accent text-navy px-12 py-4 font-bold text-lg hover:bg-yellow-400 transition-all rounded-sm shadow-lg w-full md:w-auto">
+                        入力内容を送信する
+                    </button>
+                </div>
+            </form>
+            <div id="successMessage" class="hidden mt-8 p-6 bg-white/10 border border-white/20 text-white text-center rounded-lg backdrop-blur-sm">
+                <p class="font-bold text-lg mb-2">送信が完了いたしました。</p>
+                <p class="text-sm text-blue-100">お問い合わせ誠にありがとうございます。担当者より1〜2営業日以内にご連絡申し上げます。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 减分项修改：扩充的 Footer -->
+    <footer class="bg-slate-900 text-white pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Footer 品牌 -->
+                <div class="md:col-span-2">
+                    <span class="text-xl font-bold tracking-tighter text-white mb-4 block">TOKYO <span class="font-light text-slate-400">HOSPITALITY CLEAN</span></span>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-6 max-w-sm">
+                        台東区・墨田区エリアを中心に、ホテルの資産価値を守り、ゲストに感動を与える最高品質の客室清掃を提供します。
+                    </p>
+                    <div class="text-sm text-slate-400">
+                        <p>〒111-0000 東京都台東区〇〇丁目〇-〇</p>
+                        <p class="mt-1">TEL: 03-XXXX-XXXX（平日 9:00 - 18:00）</p>
+                    </div>
+                </div>
+                <!-- Footer 导航 1 -->
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Services</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a href="#standards" class="hover:text-accent transition-colors">清掃基準・こだわり</a></li>
+                        <li><a href="#system" class="hover:text-accent transition-colors">管理体制・スタッフ教育</a></li>
+                        <li><a href="#digital" class="hover:text-accent transition-colors">IT・デジタル活用</a></li>
+                        <li><a href="#case" class="hover:text-accent transition-colors">導入事例・実績</a></li>
+                    </ul>
+                </div>
+                <!-- Footer 导航 2 -->
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Company</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a href="#workflow" class="hover:text-accent transition-colors">ご契約までの流れ</a></li>
+                        <li><a href="#faq" class="hover:text-accent transition-colors">よくあるご質問（FAQ）</a></li>
+                        <li><a href="#company" class="hover:text-accent transition-colors">会社概要</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center text-slate-500 text-xs">
+                &copy; 2024 Tokyo Hospitality Clean Co., Ltd. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- 加分项：移动端悬浮按钮 (Sticky CTA) -->
+    <div class="fixed bottom-0 left-0 w-full z-40 md:hidden bg-white border-t border-slate-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] p-3">
+        <a href="#contact" class="flex items-center justify-center w-full bg-accent text-navy py-3.5 rounded-md font-bold text-base shadow-sm active:bg-yellow-400 transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            無料試掃を申し込む
+        </a>
+    </div>
+
+    <script>
+        // 表单提交交互
+        const form = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            form.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+        });
+
+        // 导航栏滚动样式切换
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/95', 'shadow-md', 'py-1');
+            } else {
+                nav.classList.remove('bg-white/95', 'shadow-md', 'py-1');
+            }
+        });
+    </script>
+</body>
+</html>
